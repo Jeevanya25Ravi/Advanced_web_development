@@ -25,17 +25,4 @@ An interactive Tamil retro playlist web app with a clean card-grid UI, live filt
 - JavaScript (`app.js`)
 - TypeScript source (`app.ts`)
 
-## Project Structure
 
-PulseDeck/
-├── index.html
-├── styles.css
-├── app.js
-├── app.ts
-└── assets/
-    └── artists/
-        ├── spb.jpg
-        ├── yesudas.jpg
-        ├── sjanaki.jpg
-        ├── psusheela.jpg
-        └── ilaiyaraaja-2.jpg
