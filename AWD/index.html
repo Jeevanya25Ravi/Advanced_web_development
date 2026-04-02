@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulseDeck Music Player</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Abril+Fatface&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-shape bg-one"></div>
+  <div class="bg-shape bg-two"></div>
+
+  <main class="app-shell">
+    <header class="hero">
+      <p class="eyebrow">PulseDeck</p>
+      <h1>Interactive Music Player</h1>
+      <p class="subtitle">A dynamic playlist experience with real-time filtering, sorting, and smart playback history.</p>
+    </header>
+
+    <section class="controls" aria-label="Playlist Filters">
+      <div class="control-group control-wide">
+        <label for="searchInput">Search</label>
+        <input id="searchInput" type="search" placeholder="Search by title, album, artist..." />
+      </div>
+
+      <div class="control-group">
+        <label for="genreFilter">Genre</label>
+        <select id="genreFilter"></select>
+      </div>
+
+      <div class="control-group">
+        <label for="artistFilter">Artist</label>
+        <select id="artistFilter"></select>
+      </div>
+
+      <div class="control-group">
+        <label for="sortBy">Sort By</label>
+        <select id="sortBy">
+          <option value="title">Title</option>
+          <option value="artist">Artist</option>
+          <option value="album">Album</option>
+          <option value="genre">Genre</option>
+          <option value="duration">Duration</option>
+          <option value="playCount">Play Count</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <article class="panel now-playing" aria-live="polite">
+        <h2>Now Playing</h2>
+        <div id="nowPlayingContent" class="now-playing-content">
+          <p class="empty-state">Select a song to start listening.</p>
+        </div>
+        <div class="player-controls">
+          <button id="prevBtn" class="control-btn" type="button">Prev</button>
+          <button id="toggleBtn" class="control-btn primary" type="button">Play</button>
+          <button id="nextBtn" class="control-btn" type="button">Next</button>
+        </div>
+      </article>
+
+      <article class="panel recent-panel">
+        <h2>Recently Played</h2>
+        <ol id="recentlyPlayedList" class="recent-list"></ol>
+        <div class="metrics">
+          <p><strong id="totalSongsStat">0</strong><span>Total Songs</span></p>
+          <p><strong id="favoritesStat">0</strong><span>Favorites</span></p>
+          <p><strong id="playsStat">0</strong><span>Total Plays</span></p>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <h2 class="grid-heading">Playlist Grid</h2>
+      <div id="songGrid" class="song-grid"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
